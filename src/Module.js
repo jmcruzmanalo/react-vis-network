@@ -49,7 +49,10 @@ export default class VisModule extends PureComponent {
 
         if (canvasPosition) {
           const boundingBox = network.getBoundingBox(id);
-          const topCenterPosition = { x: canvasPosition.x, y: boundingBox.top };
+          const topCenterPosition = {
+            x: canvasPosition.x,
+            y: canvasPosition.y
+          };
 
           const domPosition = network.canvasToDOM(topCenterPosition);
 
@@ -129,12 +132,11 @@ export default class VisModule extends PureComponent {
 
     return (
       <>
-        {network &&
-          decorator && (
-            <div style={style} ref={this.decoratorRef}>
-              {decorator(this.props)}
-            </div>
-          )}
+        {network && decorator && (
+          <div style={style} ref={this.decoratorRef}>
+            {decorator(this.props)}
+          </div>
+        )}
       </>
     );
   }

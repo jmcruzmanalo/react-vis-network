@@ -32,6 +32,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.52",
     "@babel/core": "^7.0.0-beta.52",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.0.0-beta.52",
     "@babel/preset-react": "^7.0.0-beta.52",
     "@babel/preset-stage-2": "^7.0.0-beta.52",
